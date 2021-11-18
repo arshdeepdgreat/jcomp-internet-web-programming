@@ -73,7 +73,7 @@ else{
    
 
      <label style="font-size:18px; color:black;">Password</label>
-     <input type="password" name="password" value='' required>
+     <input type="password" name="password" value='' id="password" required>
      <div class="centre red-text"><?php echo $msg ?></div>
 
     <p>

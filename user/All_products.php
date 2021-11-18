@@ -25,7 +25,6 @@
         else{
             $he ="in ".$prods1['cat_name']." category";
         }
-        // print_r($prods);
     }
     else{
         $sql= "SELECT * FROM `product` WHERE `status`=1 ORDER BY `product_name` asc ";
@@ -43,13 +42,7 @@
     <title>Customer | Home</title>
     <link rel="stylesheet" href="../templates/stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- <style>
-        form{
-			max-width: 800px;
-			margin: 100px;
-			padding: 20px;
-		}
-    </style> -->
+    
 </head>
 <body class="grey lighten-4" >
 <nav class="red z-depth-0" style="padding-right: 30px;padding-left: 80px;">
@@ -83,17 +76,14 @@
                           <br>
                           <h5>Price: <?php echo $p['product_price'];?></h5>
                           <h7>Seller ID: <?php echo $p['seller_id'];?></h7>
-                          <br>
-                          <a href="#" class="btn brand z-depth-0">Purchase Now</a>
-                          
-                          <!-- <a href="purchase.php?product_id=<?php echo $p['product_id']; ?>" class="btn brand z-depth-0">Purchase Now</a> -->
+                          <br>                          
+                          <a href="purchase.php?product_id=<?php echo $p['product_id']; ?>" class="btn brand z-depth-0">Purchase Now</a>
                           </div>
                         </div>
                         </center>
                     </div>
             </div>
         <?php } ?>  
-        <!-- <div class="center"><a href="user_categories.php" class="black-text btn-large orange">View all</a></div> -->
     </div>
     </section>
 </div>
@@ -101,6 +91,5 @@
 <section class="footer">
         <div class="container textcenter">
             <h5>© All rights reserved<br>
-            <!-- Made by <a href="https://github.com/arshdeepdgreat" class="href">Arshdeep Singh</a></h5> -->
         </div>
 </section>

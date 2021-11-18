@@ -73,7 +73,7 @@ $adminusername='';
     <input type="text" name="adminusername" value='<?php echo $adminusername;?>' required>
 
     <label style="font-size:18px; color:black;">Password</label>
-    <input type="password" name="adminpassword" value='<?php echo $adminpassword;?>' required>
+    <input type="password" name="adminpassword" value='<?php echo $adminpassword;?>' id="password" required>
     <div class="red-text"><p><?php echo $errmsg ; ?></p></div>
 
     <p>
