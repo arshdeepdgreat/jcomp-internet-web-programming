@@ -13,6 +13,7 @@
     {
         if($str!=""){
             return mysqli_real_escape_string($conn,$str);
+            // "<scrpit>"hello"</script>"
         }
     }
 ?>
