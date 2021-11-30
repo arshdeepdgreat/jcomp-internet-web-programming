@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2021 at 10:34 AM
+-- Generation Time: Nov 30, 2021 at 06:11 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.1
 
@@ -96,7 +96,8 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`cust_id`, `cust_username`, `cust_pass`, `cust_name`, `cust_addr`, `cust_email`, `cust_image`, `cust_phone`, `cust_balance`) VALUES
-(8, 'arshdeep', 12345, 'Arshdeep Singh', 'A4-405 adora akshaya homes', 'arshdeepdgreat@gmail.com', '../templates/images/cust_dp/arshdeep dp.png', 8754541444, 900000);
+(8, 'arshdeep', 12345, 'Arshdeep Singh', 'A4-405 adora akshaya homes', 'arshdeepdgreat@gmail.com', '../templates/images/cust_dp/arshdeep dp.png', 8754541444, 100000),
+(11, 'nirzar', 12345, 'Nirzar Modi', 'vit vellore', 'nirzar@gmail.com', '../templates/images/cust_dp/Annotation 2021-06-03 012855.png', 9000000000, 100000);
 
 -- --------------------------------------------------------
 
@@ -121,8 +122,8 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`product_id`, `cat_id`, `seller_id`, `product_name`, `product_price`, `product_img`, `timestamp_add`, `status`, `product_desc`) VALUES
-(13, 300, 14, 'Rose Painting', 120000, '../templates/images/products/rose.jpg', '2021-05-24 08:50:34', 1, 'This is a famous detail of the rose from the portrait of Marie Antoinette by Louise Élisabeth'),
-(14, 300, 14, 'Swing of flowers', 800000, '../templates/images/products/painting.jpeg', '2021-05-24 08:52:20', 1, 'This is a famous painting made for auction by Louise Élisabeth Vigée Le Brun.'),
+(13, 300, 14, 'Rose Painting', 120000, '../templates/images/products/rose.jpg', '2021-05-24 08:50:34', 1, 'This is a famous detail of the rose from the portrait of Marie Antoinette by Louise Elisabeth.'),
+(14, 300, 14, 'Swing of flowers', 800000, '../templates/images/products/painting.jpeg', '2021-05-24 08:52:20', 2, 'This is a famous painting made for auction by Louise Élisabeth Vigée Le Brun.'),
 (15, 300, 14, 'Scenic Beauty', 50000, '../templates/images/products/scenic beauty.jpeg', '2021-05-24 08:57:57', 1, 'A beautiful piece made for general appreciation'),
 (16, 300, 14, 'Red Head Girl', 100000, '../templates/images/products/a red head girl.jpg', '2021-05-24 09:01:11', 2, 'The red head girl painting appreciated worldwide for its graceful nature.'),
 (18, 409, 14, 'Polaroid Camera', 50000, '../templates/images/products/polaroid.jpg', '2021-05-27 18:18:46', 1, 'This is a polaroid camera that is in working condition and is about 7 years old .'),
@@ -130,8 +131,7 @@ INSERT INTO `product` (`product_id`, `cat_id`, `seller_id`, `product_name`, `pro
 (20, 409, 14, 'Compass ', 30000, '../templates/images/products/compass.jpg', '2021-05-27 18:18:46', 1, 'A magnetic compass obtained from a ship over 25 years old'),
 (21, 411, 14, 'Roman Coins', 10000, '../templates/images/products/roman.jpg', '2021-05-27 18:18:46', 1, 'All the known pieces of roman currency.The currency is almost 200 years old'),
 (22, 407, 14, 'Antique Pistol ', 150000, '../templates/images/products/maxresdefault.jpg', '2021-05-27 18:18:46', 1, 'A percussion antique handheld pistol that can fire at very high speeds.'),
-(23, 410, 14, 'Xing Dyanasty Jar', 110000, '../templates/images/products/x.jpg', '2021-05-27 18:18:46', 1, 'This is a well preserved Antique jar from Xing Dyanasty With very nice designs and intricate patterns'),
-(24, 406, 14, 'sample scuplture', 120000, '../templates/images/products/Annotation 2021-06-03 194950.png', '2021-10-20 11:40:08', 1, 'Ut ultrices diam quis justo commodo lacinia. Praesent augue leo, facilisis sed sem quis, commodo malesuada nulla. Aliquam fringilla laoreet leo varius interdum. Etiam dictum diam quis mi tincidunt, vitae varius dolor volutpat. Vestibulum consequat justo et nibh efficitur efficitur. Pellentesque molestie massa at ligula dapibus, at ullamcorper velit volutpat. Fusce ut molestie orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce semper risus non erat accumsan malesuada.');
+(23, 410, 14, 'Xing Dyanasty Jar', 110000, '../templates/images/products/x.jpg', '2021-05-27 18:18:46', 1, 'This is a well preserved Antique jar from Xing Dyanasty With very nice designs and intricate patterns');
 
 -- --------------------------------------------------------
 
@@ -156,7 +156,7 @@ CREATE TABLE `sellers` (
 --
 
 INSERT INTO `sellers` (`seller_id`, `seller_username`, `seller_name`, `seller_pass`, `seller_img`, `seller_email`, `seller_phone`, `seller_addr`, `seller_aadhar`) VALUES
-(14, 'arshdeep', 'Arshdeep Singh', '12345', '../templates/images/seller_dps/arshdeep dp.png', 'arshdeepdgreat@gmail.com', 8754541603, 'A4-405 adora akshaya homes ,Padur', 2147483647);
+(14, 'arshdeep', 'Arshdeep Singh', '12345', '../templates/images/seller_dps/arshdeep dp.png', 'arshdeepdgreat@gmail.com', 8754541603, 'A4-405 adora akshaya homes ,Padur,OMR road,Chennai, 603103', 2147483647);
 
 -- --------------------------------------------------------
 
@@ -178,7 +178,8 @@ CREATE TABLE `transactions` (
 --
 
 INSERT INTO `transactions` (`cust_id`, `seller_id`, `timestamp`, `trans_id`, `product_id`, `Total`) VALUES
-(8, 14, '2021-10-19 04:27:02', 3, 16, 100000);
+(8, 14, '2021-10-19 04:27:02', 3, 16, 100000),
+(8, 14, '2021-11-18 04:03:34', 4, 14, 800000);
 
 --
 -- Indexes for dumped tables
@@ -248,7 +249,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `cust_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `cust_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `product`
@@ -266,7 +267,7 @@ ALTER TABLE `sellers`
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `trans_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `trans_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
